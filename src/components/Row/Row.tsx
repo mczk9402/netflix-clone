@@ -25,13 +25,11 @@ export const Row = ({ title, fetchUrl, isLargeRow }: Props) => {
 
   useEffect(() => {
     // 初回読み込みかfetchUrlに変更があった場合に発火
-    async function fetchData() {
-      // fetchUrlでAPIを叩く
+    const fetchData = async () => {
       const request = await instance.get(fetchUrl);
-      // Moviesに代入
       setMovies(request.data.results);
       return request;
-    }
+    };
     fetchData();
   }, [fetchUrl]);
 
