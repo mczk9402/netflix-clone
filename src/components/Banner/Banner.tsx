@@ -1,4 +1,3 @@
-import { trace } from 'console';
 import instance from 'instance';
 import { useEffect, useState } from 'react';
 import { requests } from 'request.js';
