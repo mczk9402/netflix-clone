@@ -57,7 +57,7 @@ export const Row: React.VFC<Props> = ({ title, fetchUrl, isLargeRow }) => {
     } else {
       try {
         let trailerUrl = await instance.get(
-          `/movie/${movie.id}/videos?api_key=${process.env.REACT_APP_API_KEY}`
+          `/movie/${movie.id}/videos?api_key=9640cd5590a22950b9cb1dcc3f907453`
         );
         setTrailerUrl(trailerUrl.data.results[0]?.key);
 
